@@ -16,7 +16,7 @@ class Tweets extends Component {
       }
     }).then( res => {
       var arr = [];
-      for(i=0; i<res.usernames.length; i++) {
+      for(var i=0; i<res.usernames.length; i++) {
         arr.push({
           username: res.usernames[i],
           displayName: res.screenNames[i],
