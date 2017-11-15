@@ -8,20 +8,6 @@ class Main extends Component {
     this.state = {
       text: ''
     }
-    this.click = this.click.bind(this);
-  }
-  click() {
-    axios.get('http://127.0.0.1:5000/getBananas', {
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      }
-    }).then(data => {
-      this.setState({
-        text: data.data
-      })
-    }).catch(err => {
-      console.log(err);
-    });
   }
   render() {
     return (
@@ -33,7 +19,6 @@ class Main extends Component {
       <h4 className="App-intro" style={{marginTop: '1em'}}>
         To get tweets, click on this button below
       </h4>
-      <button>Get Tweets!</button>
       <Tweets></Tweets>
     </div>
     )
